@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0f011a;
+  --color-surface: rgba(255, 255, 255, 0.03);
+  --color-brand-pink: #d946ef;
+  --color-brand-violet: #7c3aed;
+  
+  /* Custom Gradients */
+  --bg-gradient-main: radial-gradient(circle at top center, #1e0b3d 0%, #0f011a 100%);
+}
+
+@layer base {
+  body {
+    background: var(--bg-gradient-main);
+    @apply text-gray-200 antialiased min-h-screen font-sans;
+  }
+}
+
+/* Glassmorphism utility */
+.glass-card {
+  @apply bg-surface border border-white/5 backdrop-blur-xl rounded-[2rem] transition-all duration-300;
+}
+
+.glass-card:hover {
+  @apply border-white/10 bg-white/[0.06] -translate-y-1 shadow-2xl shadow-brand-pink/10;
+}
+
+:root {
+  --color-background: #0f011a;
+  --color-surface: rgba(255, 255, 255, 0.03);
+  --color-brand-pink: #d946ef;
+  --color-brand-violet: #7c3aed;
+  --bg-gradient-main: radial-gradient(circle at top center, #1e0b3d 0%, #0f011a 100%);
+}
+
+/* Base styles (kept simple to avoid @apply usage in raw CSS) */
+body {
+  background: var(--bg-gradient-main);
+  color: #e5e7eb; /* text-gray-200 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+
+/* Glassmorphism utility (explicit CSS to avoid @apply lint issues) */
+.glass-card {
+  background: var(--color-surface);
+  border: 1px solid rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+}
+.glass-card:hover {
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.06);
+  transform: translateY(-0.25rem);
+  box-shadow: 0 20px 40px rgba(217,70,239,0.1);
+}
