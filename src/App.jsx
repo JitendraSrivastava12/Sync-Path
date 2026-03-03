@@ -6,6 +6,7 @@ import AlgorithmBrowser from './pages/AlgorithmBrowser'
 import AlgorithmVisualizer from './pages/AlgorithmVisualizer'
 import FooterPart from './components/FooterSection'
 import ScrollToTop from './components/ScrollToTop'
+import AlgorithmDocs from './pages/AlgoDocs'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/algorithms" element={<AlgorithmBrowser />} />
           <Route path="/visualize/:categoryId/:algorithmId" element={<AlgorithmVisualizer />} />
+            <Route path="/algorithms/docs" element={<AlgorithmDocs />} />
         </Routes>
         
         <FooterPart/>

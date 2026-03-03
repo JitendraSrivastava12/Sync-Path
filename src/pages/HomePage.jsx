@@ -32,9 +32,9 @@ export default function HomePage() {
           >
             LAUNCH ENGINE
           </Link>
-          <button className="w-full sm:w-auto px-12 py-4 bg-white/5 border border-white/10 text-white font-semibold rounded-2xl hover:bg-white/10 transition-all backdrop-blur-xl">
+          <Link to="/algorithms/docs" className="w-full sm:w-auto px-12 py-4 bg-white/5 border border-white/10 text-white font-semibold rounded-2xl hover:bg-white/10 transition-all backdrop-blur-xl">
             DOCUMENTATION
-          </button>
+          </Link>
         </div>
       </section>
 

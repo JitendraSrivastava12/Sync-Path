@@ -71,7 +71,7 @@ export default function FooterPart () {
                 <p className="text-gray-500 text-xs font-medium">Full Stack Architect & Designer</p>
               </div>
               <a 
-                href="mailto:contact@jitendra.dev" 
+                href="mailto:jsking981@gmail.com" 
                 className="flex items-center gap-2 text-fuchsia-500 text-xs font-bold hover:text-fuchsia-400 transition-colors"
               >
                 <Mail size={14} /> Get in Touch
